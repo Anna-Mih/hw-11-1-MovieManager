@@ -1,7 +1,6 @@
 package ru.netology.domain;
 
 public class MovieManager {
-
     int limitLast = 10;
     public String movie;
     public String[] movies = new String[0];
@@ -11,7 +10,6 @@ public class MovieManager {
     }
 
     public MovieManager() {
-
     }
 
     public void addMovie(String movie) {
@@ -35,9 +33,7 @@ public class MovieManager {
         } else {
             resultLength = this.limitLast;
         }
-
         String[] result = new String[resultLength];
-
         for (int i = 0; i < resultLength; i++) {
             result[i] = movies[movies.length - i - 1];
         }

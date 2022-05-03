@@ -3,7 +3,6 @@ package ru.netology.domain;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MovieManagerTest {
-
     @org.junit.jupiter.api.Test
     void shouldAddFirstMovie() {
         MovieManager manager = new MovieManager();
@@ -43,7 +42,6 @@ class MovieManagerTest {
     @org.junit.jupiter.api.Test
     void shouldFindAllIfExist() {
         MovieManager manager = new MovieManager();
-
         manager.addMovie("I Robot");
         manager.addMovie("Lord of rings");
 
@@ -56,11 +54,9 @@ class MovieManagerTest {
     @org.junit.jupiter.api.Test
     void shouldShowLastIfMoviesLengthLessThenLimitLast() {
         MovieManager manager = new MovieManager();
-
         manager.addMovie("I Robot");
         manager.addMovie("Lord of rings");
         manager.addMovie("Boss-molokosos");
-
 
         String[] expected = {"Boss-molokosos", "Lord of rings", "I Robot"};
         String[] actual = manager.showLast();
@@ -71,7 +67,6 @@ class MovieManagerTest {
     @org.junit.jupiter.api.Test
     void shouldShowLastIfMoviesLengthMoreThenLimitLast() {
         MovieManager manager = new MovieManager(5);
-
         manager.addMovie("I Robot");
         manager.addMovie("Lord of rings");
         manager.addMovie("Boss-molokosos");
@@ -94,13 +89,11 @@ class MovieManagerTest {
         String[] actual = manager.showLast();
 
         assertArrayEquals(expected, actual);
-
     }
 
     @org.junit.jupiter.api.Test
     void shouldShowLastIfMoviesLengthEqualLimitLast() {
         MovieManager manager = new MovieManager(9);
-
         manager.addMovie("Lord of rings");
         manager.addMovie("Boss-molokosos");
         manager.addMovie("The star is born");
@@ -126,5 +119,4 @@ class MovieManagerTest {
 
         assertArrayEquals(expected, actual);
     }
-
 }
